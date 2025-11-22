@@ -41,7 +41,7 @@
 
 # 🧩 Architecture
  
-![Architecture of Agent](https://github.com/Deepcodr/JobPilotAgent/tree/main/src/main/java/com/deepcodr/JobPilot/resources/architecture.png)
+![Architecture of Agent](https://github.com/Deepcodr/JobPilotAgent/tree/main/src/main/resources/architecture.png)
 
 ## 🔌 **Integration: Jooble Job Search API**
 
@@ -84,7 +84,7 @@
 
 ## 📦 Project Structure
 
-![Project Structure](https://github.com/Deepcodr/JobPilotAgent/tree/main/src/main/java/com/deepcodr/JobPilot/resources/project_structure.png)
+![Project Structure](https://github.com/Deepcodr/JobPilotAgent/tree/main/src/main/resources/project_structure.png)
 
 ## 🔧 Setup Instructions
 1️⃣ Clone the repo
