@@ -1,126 +1,122 @@
-JobPilot Agent– Intelligent Job Search & Apply Assistant
-AI-powered Job Search, Filtering & Smart Apply Helper built with Java + Agents + Jooble API
+# JobPilot Agent– Intelligent Job Search & Apply Assistant
+**AI-powered Job Search, Filtering & Smart Apply Helper built with Java + Agents + Jooble API**
 
-📌 Overview
-JobPilot is an intelligent job-search built using Java, Google Gemini AI (ADK Agent Framework), and the Jooble Job Search API.
+## 📌 Overview
 
-It helps users:
+**JobPilot is an intelligent job-search built using Java, Google Gemini AI (ADK Agent Framework), and the Jooble Job Search API.**
 
-🔎 Search for jobs across platforms using natural language
+## It helps users:
 
-🧠 Use AI to summarize, filter job matches
+🔎 **Search for jobs across platforms using prompt**
 
-🎯 Key Features
+🧠 **Use AI to summarize, filter job matches**
 
-🔍 1. Job Search Agent (with External Tool Call)
+## 🎯 **Key Features**
 
-Uses Jooble API to fetch real job listings
+🔍 **1. Job Search Agent (with External Tool Call)**
 
-Supports filters: skill, experience, location, salary
+- Uses Jooble API to fetch real job listings
 
-Automatically enriches results using Google Search (optional)
+- Supports filters: company, location, experience, salary
 
-🤝 2. Multi-Agent Architecture
+- Automatically enriches results using Google Search (optional)
 
-Search Agent → Fetches & ranks jobs
+🤝 **2. Multi-Agent Architecture**
 
+- Search Agent → Fetches & lists jobs
 
-🧠 3. AI-Powered Enhance
+🧠 **3. AI-Powered Enhance**
 
-Summarizes job descriptions
+- Summarizes job descriptions
 
-Filters Job
+- Filters Job
 
+**Displays:**
 
-Displays:
+- Job list
 
-Job list
+- Job summary
 
-Job summary
+- Filtered Job List
 
-Filtered Job List
+# 🧩 Architecture
+ 
+![Architecture of Agent](https://github.com/Deepcodr/JobPilotAgent/tree/main/src/main/java/com/deepcodr/JobPilot/resources/architecture.png)
 
+## 🔌 **Integration: Jooble Job Search API**
 
-🧩 System Architecture
-+------------------+       +--------------------+        +--------------------+
-| User             | <---> | Search Agent       | <----> | Jooble API         |
-| (Currently CLI)  |       | (Gemini ADK Agent) |        | (External Tool)    |
-+------------------+       +--------------------+        +--------------------+
-  
+**API Endpoint**
+>POST https://jooble.org/api/<YOUR_API_KEY>
 
-🔌 Integration: Jooble Job Search API
-API Endpoint
-POST https://jooble.org/api/<YOUR_API_KEY>
-
-Sample Request
+**Sample Request**
+```
 {
   "keywords": "Java Developer",
   "location": "India",
   "page": 1
 }
+```
+
+## 🛠️ Tech Stack
+- Component Technology
+
+- Agent Framework	Google Gemini ADK
+
+- Java 21
+
+- Job Data Provider : Jooble API
+
+- Build Tool	Maven or Gradle
 
 
-🛠️ Tech Stack
-Component	Technology
-Agent Framework	Google Gemini ADK
-Backend	Java 17+
+## 🚀 How It Works
 
-Job Data Provider	Jooble API
-
-Build Tool	Maven or Gradle
-
-
-🚀 How It Works
-🔸 Step 1 — User enters query
-
-Example:
-
+>Example:
 “Find me Java backend developer jobs in New York"
 
-🔸 Step 2 — Search Agent
+>Converts query → API payload
 
-Converts query → API payload
+>Calls Jooble API
 
-Calls Jooble API
+>Enhances results using Gemini AI
 
-Enhances results using Gemini AI
+>Sends list to CLI
 
-Sends list to CLI
+## 📦 Project Structure
 
-📦 Project Structure
-jobpilot/
- ├── src/main/java/com/deepcodr/JobPilot
- │   ├── dto/
- │   │     ├── Job.java
- │   │     └── JoobleRequestBody.java
- │   └── AgentCliRunner.java
- │   └── JobPilotAgent.java
- ├── resources/
- ├── test/
- ├── .env
- ├── README.md
- └── pom.xml
+![Project Structure](https://github.com/Deepcodr/JobPilotAgent/tree/main/src/main/java/com/deepcodr/JobPilot/resources/project_structure.png)
 
-🔧 Setup Instructions
+## 🔧 Setup Instructions
 1️⃣ Clone the repo
+
+```
 git clone https://github.com/deepcodr/jobpilot.git
+```
 
 2️⃣ Create a .env file at project root and add following vars. Make sure you setup env in your shell.
+
+```
 GOOGLE_API_KEY=<YOUR_GOOGLE_AI_STUDIO_API_KEY>
 JOOBLE_API_KEY=<YOUR_JOOBLE_API_KEY>
+```
 
 3️⃣ Install dependencies
+```
 mvn clean install
+```
 
 4️⃣ Run the app
+
+```
 mvn compile exec:java -Dexec.mainClass="com.deepcodr.JobPilotAgent.AgentCliRunner"
+```
 
-🔥 Future Enhancements
+## 🔥 Future Enhancements
 
-Apply functionality by just specifying the job ID.
+**Apply functionality by just specifying the job ID.**
 
-Auto email job notifications
+**Auto email job notifications**
 
-❤️ Contributing
+## ❤️ Contributing
 
-Pull requests are welcome!
+###  _**Pull requests are welcome!**_
